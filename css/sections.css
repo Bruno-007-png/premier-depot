@@ -193,14 +193,16 @@
 }
 .whatsapp-button {
         position: fixed;
-        bottom: 5px;
-        right: 5px;
-        background-color: green;
-        border-radius: 35px;
-        font-size: 14px;
-        color: white;
+        bottom: 20px;
+        right: 35px;
+        color: green;
+        font-size: 50px;
     
     }
+.whatsapp-button .zapp:hover{
+    background: none;
+    color: green;
+}
 
 .values {
     display: flex;

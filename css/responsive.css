@@ -7,6 +7,7 @@
     h2 {
         font-size: 2rem;
     }
+ 
     
     .hero {
         height: auto; 
@@ -39,6 +40,7 @@
         display: block;
         z-index: 1001; 
     }
+ 
     
     .nav-menu {
         position: fixed;
@@ -149,7 +151,7 @@
     }
     
     .back-to-top {
-        bottom: 50px;
+        bottom: 80px;
         right: 20px;
         width: 40px;
         height: 40px;
@@ -184,7 +186,17 @@
     h1 {
         font-size: 1.8rem;
     }
-
+    .whatsapp-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        font-size: 45px;
+        color: green;
+        
+    
+       
+    
+    }
 
     
     h2 {

@@ -1,0 +1,128 @@
+/* Hero Section */
+.hero {
+    background-color: var(--dark-background); /* Fallback if images don't load, uses new dark background */
+    color: var(--light-text);
+    position: relative;
+    overflow: hidden;
+    height: 700px; /* Defined height */
+    min-height: 500px; /* Minimum height for smaller viewports or content */
+    display: flex; 
+    align-items: center; 
+}
+
+.hero-swiper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; 
+}
+
+.hero-slide-item {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left; /* Default text align for content within slide */
+}
+
+.hero-slide-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 26, 26, 0.7); /* Overlay based on new --dark-background (e.g., #1A1A1A) */
+}
+
+.hero-container-overlay {
+    position: relative;
+    z-index: 1; /* Above slide overlay but below hero-content's potential z-index if any */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Standard container padding */
+}
+
+.hero-content {
+    max-width: 650px; /* Slightly increased max-width */
+    position: relative;
+    z-index: 2; /* Ensures content is above the ::before overlay of hero-slide-item */
+    /* Removed padding-top and padding-bottom, handled by flex alignment and slide structure */
+}
+
+.hero h1 {
+    color: var(--light-text);
+    margin-bottom: 20px;
+    font-size: 2.8rem; /* Adjusted for potentially more text */
+}
+
+.hero h1 span {
+    color: #29ABE2;
+    display: block; /* Keeps the highlighted part on a new line or as a strong visual break */
+}
+
+.hero h2 {
+    color: #29ABE2;
+    font-size: 1.4rem; /* Adjusted */
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.hero p {
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9); /* Slightly softer white for paragraphs */
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+/* Swiper Navigation/Pagination styling */
+.hero-swiper .swiper-pagination-bullet {
+    background-color: var(--light-text);
+    opacity: 0.6;
+    width: 10px;
+    height: 10px;
+    transition: all var(--transition-speed) ease;
+}
+.hero-swiper .swiper-pagination-bullet-active {
+    background-color: #29ABE2;
+    opacity: 1;
+    width: 12px;
+    height: 12px;
+}
+.hero-swiper .swiper-button-next,
+.hero-swiper .swiper-button-prev {
+    color: rgba(255, 255, 255, 0.7); /* Slightly transparent white */
+    transition: color var(--transition-speed) ease, transform var(--transition-speed) ease;
+    width: 44px; /* Default Swiper nav button size */
+    height: 44px; /* Default Swiper nav button size */
+}
+.hero-swiper .swiper-button-next:hover,
+.hero-swiper .swiper-button-prev:hover {
+    color: #29ABE2;
+    transform: scale(1.1);
+}
+.hero-swiper .swiper-button-next::after,
+.hero-swiper .swiper-button-prev::after {
+    font-size: 1.8rem; /* Adjust size of arrows */
+}
+
+/* Remove old SVG animation styles if any were left */
+.hero-image, 
+.tech-illustration,
+.network-svg,
+.network-animation,
+.main-node,
+.sub-node,
+.connection,
+.center-dot,
+.edge-dot {
+    display: none; /* Or completely remove if not used elsewhere, but display:none is safer for now */
+}

@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Sitemap: https://itechservicesarl.com/sitemap.xml
+
+# Empêcher l'indexation des fichiers de configuration
+Disallow: /config.js
+Disallow: /assets/
+Disallow: /css/
+Disallow: /js/
+Disallow: /partials/ 

@@ -1,0 +1,247 @@
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .hero {
+        height: auto; 
+        min-height: 550px; 
+    }
+    .hero-content {
+       max-width: 90%; 
+    }
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+    .hero h2 {
+        font-size: 1.3rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    .menu-toggle {
+        display: block;
+        z-index: 1001; 
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%; 
+        width: 90%;
+        max-width: 400px;
+        height: 100vh;
+        background-color: var(--dark-background);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.5s ease; 
+        z-index: 1000; 
+        padding-top: 60px; 
+    }
+    
+    .nav-menu.active {
+        right: 0; 
+    }
+    
+    .nav-menu li {
+        margin: 20px 0;
+    }
+    
+    .nav-menu li.shop-btn { 
+        margin-top: 30px; 
+    }
+    
+    .nav-menu .btn-shop {
+        padding: 12px 25px; 
+        font-size: 1rem;
+    }
+    
+    .hero {
+        min-height: 450px; 
+        height: auto; 
+        padding-top: 120px; 
+        padding-bottom: 60px;
+    }
+    
+    .hero .hero-container-overlay { 
+        padding: 0 15px;
+    }
+
+    .hero-content {
+        max-width: 100%; 
+        text-align: center; 
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+     .hero h1 span {
+        display: inline; 
+    }
+    .hero h2 {
+        font-size: 1.2rem;
+    }
+    .hero p {
+        font-size: 0.95rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 15px;
+    }
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 300px; 
+    }
+    
+    .hero-swiper .swiper-button-next,
+    .hero-swiper .swiper-button-prev {
+        width: 30px;
+        height: 30px;
+        top: auto;
+        bottom: 20px; 
+    }
+    .hero-swiper .swiper-button-next {
+        right: 10px;
+    }
+    .hero-swiper .swiper-button-prev {
+        left: 10px;
+    }
+
+    .hero-swiper .swiper-pagination {
+        bottom: 25px !important; 
+    }
+    
+    .hero-swiper .swiper-button-next::after,
+    .hero-swiper .swiper-button-prev::after {
+        font-size: 1.2rem;
+    }
+    
+    .services-grid,
+    .products-grid {
+        grid-template-columns: 1fr; 
+    }
+    
+    .contact-info {
+        grid-template-columns: 1fr; 
+    }
+    
+    .shop-cta {
+        padding: 30px 20px;
+    }
+    
+    .back-to-top {
+        bottom: 50px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .expertise-highlights-grid {
+        grid-template-columns: 1fr; 
+    }
+    
+    footer {
+        padding: 60px 0 20px; 
+    }
+    
+    .footer .section-header {
+        margin-bottom: 20px;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center; 
+    }
+    
+    .footer-bottom-links {
+        flex-direction: column; 
+    }
+    
+    .social-icons {
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .section-header {
+        margin-bottom: 40px;
+    }
+    
+    .services, 
+    .expertise, 
+    .about, 
+    .products, 
+    .contact {
+        padding: 60px 0;
+    }
+
+    .hero {
+        padding-top: 100px; 
+        padding-bottom: 40px;
+        min-height: 400px;
+    }
+     .hero h1 {
+        font-size: 1.7rem;
+    }
+    .hero h2 {
+        font-size: 1.1rem;
+    }
+    .hero p {
+        font-size: 0.9rem;
+        margin-bottom: 30px;
+    }
+    
+    .contact-content,
+    .about-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .highlight-item { 
+        padding: 25px 20px;
+    }
+    
+    .highlight-item i {
+        font-size: 2.2rem;
+    }
+    
+    .highlight-item h4 {
+        font-size: 1.15rem;
+    }
+    
+    .highlight-item p {
+        font-size: 0.9rem;
+    }
+
+    .footer-logo {
+        margin: 20px 0; 
+    }
+}

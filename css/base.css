@@ -1,0 +1,251 @@
+:root {
+    --primary-color: #29ABE2; /* Main blue color */
+    --secondary-color: #4A4A4A; /* Dark Gray from new logo */
+    --accent-color: #6EFFFE; /* Lighter Cyan for accents */
+    --background-color: #FFFFFF;
+    --dark-background: #343a40; /* Changed from #1A1A1A to a dark gray for logo contrast */
+    --text-color: #333333;
+    --light-text: #FFFFFF;
+    --light-gray: #F0F0F0; /* Slightly adjusted light gray */
+    --border-color: #D0D0D0; /* Adjusted border color */
+    --success-color: #4CAF50;
+    --shadow-color: rgba(41, 171, 226, 0.1); /* Shadow based on new primary */
+    --transition-speed: 0.3s;
+
+    /* === NEW Header Specific Colors === */
+    --header-bg-color: var(--dark-background);
+    --header-text-color: var(--light-text);
+    --header-logo-text-color: var(--light-text); /* If logo had text part */
+    --header-link-color: var(--light-text);
+    --header-link-hover-color: var(--primary-color);
+    --header-link-active-underline-color: var(--primary-color);
+    --header-mobile-menu-bar-color: var(--light-text);
+    --header-shop-btn-bg-color: var(--primary-color);
+    --header-shop-btn-text-color: var(--light-text);
+    --header-shop-btn-hover-bg-color: #1f8ab8;
+    --header-shop-btn-hover-text-color: var(--light-text);
+    --header-shadow: 0 2px 10px rgba(41, 171, 226, 0.1);
+    --header-scrolled-shadow: 0 5px 20px rgba(41, 171, 226, 0.15);
+
+
+    /* === NEW Footer Specific Colors === */
+    --footer-bg-color: var(--dark-background);
+    --footer-text-color: #ccc; /* General text color for footer */
+    --footer-heading-color: var(--light-text);
+    --footer-link-color: #BBB;
+    --footer-link-hover-color: var(--primary-color);
+    --footer-icon-color: var(--primary-color); /* For icons like in contact details */
+    --footer-logo-slogan-color: #ccc;
+    --footer-bottom-text-color: #BBB;
+    --footer-bottom-link-color: #BBB;
+    --footer-bottom-link-hover-color: var(--primary-color);
+    --footer-newsletter-input-bg: #fff;
+    --footer-newsletter-input-text: var(--text-color);
+    --footer-newsletter-input-placeholder: #6c757d;
+    --footer-newsletter-input-border: var(--border-color);
+    --footer-newsletter-button-bg: var(--primary-color);
+    --footer-newsletter-button-text: var(--light-text);
+    --footer-newsletter-button-hover-bg: #1f8ab8;
+    --footer-border-color: rgba(255, 255, 255, 0.1);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--secondary-color); /* Updated to new secondary color */
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: all var(--transition-speed) ease;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+ul {
+    list-style: none;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+    border: none;
+}
+
+.btn-primary {
+      
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    background-color: #1f8ab8;
+}
+
+.btn-primary:hover {
+  
+    color: var(--light-text);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px var(--shadow-color);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px var(--shadow-color); /* Ensure shadow color is updated if primary changes */
+}
+
+.btn-text {
+    color: var(--primary-color);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.btn-text::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: all var(--transition-speed) ease;
+}
+
+.btn-text:hover {
+    color: var(--secondary-color);
+}
+
+.btn-text:hover::after {
+    width: 100%;
+    background-color: var(--secondary-color);
+}
+
+.btn-text i {
+    transition: transform var(--transition-speed) ease;
+}
+
+.btn-text:hover i {
+    transform: translateX(5px);
+}
+
+/* Section Headers */
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.section-header h2 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.section-header h2::after {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 3px;
+    background-color: var(--primary-color); /* Ensure this uses primary color */
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-header p {
+    color: #666; /* Adjusted for better contrast if text-color is too dark */
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 80px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(41, 171, 226, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-speed) ease;
+    z-index: 99;
+}
+
+.back-to-top.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: #1f8ab8;
+    transform: translateY(-5px);
+}

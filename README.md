@@ -70,5 +70,5 @@
 
 ## Support
 Pour toute question concernant l'hébergement, contactez :
-- Email : contact@itechservicesarl.com
+- Email : brunonguedjang@gmail.com
 - Téléphone : +237 699 115 314
